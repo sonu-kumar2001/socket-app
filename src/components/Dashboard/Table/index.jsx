@@ -5,11 +5,9 @@ import TableRow from "./TableRow";
 
 export default function Table({ data }) {
   return (
-    <div className="container">
-      <table className="table">
+      <table className="table container">
         <TableHeader />
         <TableRow data={data} />
       </table>
-    </div>
   );
 }

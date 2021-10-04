@@ -11,12 +11,10 @@ export default function TableRow({ data }) {
     <tbody className="table-body">
       {data?.map((rowData, i) => (
         <tr className="table-row" key={i}>
-          {console.log(rowData)}
-          <td className="td">{rowData?.Deal}</td>
+          <td className="td">{rowData?.Order}</td>
           <td className="td">{rowData?.Login}</td>
           <td className="td no-wrap">{rowData?.Name}</td>
           <td className="td">{rowData?.PositionID}</td>
-          <td className="td">{rowData?.Order}</td>
           <td className="td no-wrap">
             {moment(rowData?.Time)
               .utcOffset("+05:30")

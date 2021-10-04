@@ -1,13 +1,12 @@
 .container {
   max-width: 1300px;
   margin: 2rem auto;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
   border-radius: 8px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .table {
+  width: 1300px;
   display: table;
   border-collapse: collapse;
   border-radius: 8px;
@@ -37,11 +36,12 @@
   .td {
     padding: 1rem;
     line-height: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.875rem;
+    width: 3rem;
+    font-size: 12px;
   }
   .no-wrap {
     white-space: nowrap;
-    width: min-content;
   }
 }
