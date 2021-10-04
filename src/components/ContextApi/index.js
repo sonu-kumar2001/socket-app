@@ -1,4 +1,5 @@
 import React, { Component, createContext, useState, useEffect } from "react";
+import { Manager } from "socket.io-client";
 var socket = window.io.connect("https://almondfxsocketapi.digixhub.com", {
   transports: ["websocket"],
 });
@@ -40,18 +41,18 @@ export const Contx = createContext();
 
 export const ConProvider = (props) => {
   const [socketData, setSocketData] = useState([]);
+  let managerId = localStorage.getItem("managerId");
   useEffect(() => {
     socketCall();
-  },[]);
+  });
   const socketCall = () => {
-    socket.on("deals20211001", (data) => {
+    socket.on("deals2021" + managerId, (data) => {
       // console.log(data);
       setSocketData(data);
     });
   };
   return (
     <>
-      {console.log(socketData, "sonu")}
       <Contx.Provider
         value={{
           socketData: socketData.dealsData,
