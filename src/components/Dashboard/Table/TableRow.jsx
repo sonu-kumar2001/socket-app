@@ -23,7 +23,7 @@ export default function TableRow({ data }) {
           <td className="td">{rowData?.Type}</td>
           <td className="td">{rowData?.Entry}</td>
           <td className="td">{rowData?.Symbol}</td>
-          <td className="td">{rowData?.Volume}</td>
+          <td className="td">{rowData?.Volume / 10000}</td>
           <td className="td">{rowData?.Price}</td>
           <td className="td">{rowData?.Commission}</td>
         </tr>

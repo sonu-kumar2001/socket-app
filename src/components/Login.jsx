@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import LoginForm from "./Form/LoginForm";
 import authApi from "../axios/auth";
 import { setAuthHeaders } from "../axios/axios";
+import { isNil, isEmpty, either } from "ramda";
 
 export default function Login() {
   const [managerId, setManagerId] = useState(0);
   const [password, setPassword] = useState("");
-
+  const Id = localStorage.getItem("managerId");
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -20,6 +21,9 @@ export default function Login() {
       console.log(error);
     }
   };
+  if (!either(isNil, isEmpty)(Id)) {
+    return window.location.href="/dashboard";
+  }
   return (
     <div>
       <LoginForm
