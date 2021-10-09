@@ -5,10 +5,15 @@ export default function Header() {
   return (
     <section className="header">
       <div className="flex-between">
-        <h1>RTTV</h1>
-        <Link to="/logout">
-          <p className="cursor logout">Logout</p>
-        </Link>
+        <div className="logo">
+          <h1>RTTV</h1>
+        </div>
+        <div className="flex nav">
+          <p className="manager-details">Manager Id: {localStorage.getItem("managerId")}</p>
+          <Link to="/logout">
+            <p className="cursor logout">Logout</p>
+          </Link>
+        </div>
       </div>
     </section>
   );
