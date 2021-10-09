@@ -1,0 +1,22 @@
+.filter {
+  position: absolute;
+  top: 90px;
+  right: 25px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  p {
+    border-bottom: 1px solid #008B8B;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .hidden {
+    display: none;
+  }
+  .visible {
+    display: block;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+}
